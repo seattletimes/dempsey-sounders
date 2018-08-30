@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html", json.project) %>
+  </head>
+  <body>
+
+    <div class="fixed-frame"></div>
+
+    <main class="scroll">
+
+      <div class="ad-spot">
+        <%= t.include("partials/_ad.html", { type: "banner" }) %>
+      </div>
+      <header class="intro">
+        <nav class="logo-bar">
+          <a class="logo" href="http://seattletimes.com">
+            <img src="./assets/st-logo.png">
+          </a>
+        </nav>
+
+        <div class="contents">
+
+          <h1>Top 5 moments from Clint Dempsey's Sounders career</h1>
+
+          <p>
+Sounders forward Clint Dempsey, who retired Wednesday at age 35, was expected to carry the franchise to new heights when he transferred over from English Premier League squad Tottenham in August 2013. Five years, one MLS Cup title, two finals appearances, a U.S. Open Cup victory and one Supporters Shield later, Dempsey arguably delivered on the team portion of that pact.</p><p>
+
+From a personal standpoint, his 47 regular-season goals remain tied with Fredy Montero for the most in franchise history. Prior to that, he became the highest-scoring U.S. born player in EPL history, netting 72 with Tottenham, and Fulham prior to that.</p><p>
+
+
+His 57 goals as a U.S. Men’s National Team player are tied with Landon Donovan for the most ever.</p><p>
+
+
+But beyond statistics, Dempsey will go down as a pioneer for the sport in this country, proving an American could hold his own overseas in the world’s toughest domestic league and its biggest international competitions. Back home in the U.S., where he began his professional career with the New England Revolution in 2004, he helped inspire younger players to pursue the sport at its elite levels.</p><p>
+
+
+At a time when Major League Soccer was at its most talented, his time with the Sounders helped bolster the league’s credibility and thrust the Sounders into big-time exposure during their most successful campaigns. Dempsey was at his best when the stakes were highest: Never more so than when playing the archrival Portland Timbers. Of Dempsey’s series-high nine goals against Portland, three were game winners and six came within the final 30 minutes.</p><p>
+
+Here are Dempsey’s Top 5 most memorable moments as a Sounders player:
+</p> 
+          <!-- <div class="social">
+            <a class="share"></a>
+          </div> -->
+
+          <p class="byline">
+            <span class="byline-name">By Geoff Baker | Times staff reporter</span>
+          </p>
+
+          <p class="instructions">
+            <i class="fa fa-chevron-down"></i>
+            Scroll to continue
+            <i class="fa fa-chevron-down"></i>
+
+        </div>
+
+      </header>
+
+    <% json.photos.sort(function(a, b) { return a.order - b.order }).forEach(function(item, i) { %>
+      <%= t.include("_details.html", { item: item, index: i }) %>
+    <% }) %>
+
+      <footer>
+        <a class="logo" href="http://seattletimes.com">
+          <img src="./assets/st-logo.png">
+        </a>
+        <a class="share-bottom"></a>
+      </footer>
+
+    </main>
+
+    <aside class="no-mobile-portrait">
+      <a class="ok" href="javascript:;">
+        <i class="fa fa-times-circle-o"></i>
+      </a>
+      Hey! This page is designed to look best in landscape mode. Rotate your device to see for yourself.
+      <i class="fa fa-rotate-left rotation"></i>
+    </aside> 
+   
+
+    <script src="app.js"></script>
+    <%= t.include("partials/_adFoot.html") %>
+    <%= t.include("partials/_workHere.html") %>
+  </body>
+</html>

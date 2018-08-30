@@ -1,0 +1,20 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "thunder-algebra"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/clint-dempsey-top-moments"
+    }
+  },
+  "title": "Clint Dempsey memorable moments",
+  "description": "Sounders forward Clint Dempsey retires from Seattle Sounders",
+  "url": "https://projects.seattletimes.com/2018/clint-dempsey-top-moments",
+  "slug": "",
+  "tags": ["interactive", "parallax"],
+  "image": "",
+  "production": true,
+  "sheets": ["1-ipxwoBmUkcVJVguW8kX5a-8cwtyNl-7SGWCu-WfeFM"]
+}
